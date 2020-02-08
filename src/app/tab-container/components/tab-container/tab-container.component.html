@@ -1,0 +1,21 @@
+<nav mat-tab-nav-bar class="custom-tab">
+    <mat-tab-group mat-dynamic-height="true" [selectedIndex]="activatedTabIndex" mat-stretch-tabs>
+        <mat-tab *ngFor="let tab of tabConfiguration">
+            <ng-template mat-tab-label>
+                <a mat-tab-link id="{{tab.serialNumber}}" [routerLink]="[tab.path]" [queryParams]="tab.queryParams"
+                    [routerLinkActiveOptions]="{exact: true}" routerLinkActive #rla="routerLinkActive">
+                    <ng-container *ngIf="tab.titleUppercase === undefined || tab.titleUppercase == true ">
+                        {{tab.translate | uppercase}}</ng-container>
+                    <ng-container *ngIf="tab.titleUppercase == false ">{{tab.translate }}</ng-container>
+                    <ng-container *ngIf="tab.icon">
+                        <mat-icon>{{tab.icon.right}}</mat-icon>
+                    </ng-container>
+                </a>
+            </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+</nav>
+
+<div class="custom-tab-body">
+    <router-outlet></router-outlet>
+</div>
