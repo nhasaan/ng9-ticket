@@ -9,15 +9,23 @@ import { TicketMessageComponent } from './components/ticket-message/ticket-messa
 import { TicketContactComponent } from './components/ticket-contact/ticket-contact.component';
 import { TicketFaqComponent } from './components/ticket-faq/ticket-faq.component';
 import { RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCardModule } from '@angular/material/card'
 import { TabContainerModule } from '../tab-container/tab-container.module';
+import { TicketIssueComponent } from './components/ticket-issue/ticket-issue.component';
 
 
 
 @NgModule({
-  declarations: [TicketComponent, TicketCreateComponent, TicketDetailsComponent, TicketSidebarComponent, TicketActionsComponent, TicketMessageComponent, TicketContactComponent, TicketFaqComponent],
+  declarations: [TicketComponent, TicketCreateComponent, TicketDetailsComponent, TicketSidebarComponent, TicketActionsComponent, TicketMessageComponent, TicketContactComponent, TicketFaqComponent, TicketIssueComponent],
   imports: [
     CommonModule,
     TabContainerModule,
+    MatCardModule,
+    FlexLayoutModule.withConfig({
+      useColumnBasisZero: true,
+      printWithBreakpoints: ['xs', 'sm', 'md', 'lg', 'xl', 'lt-sm', 'lt-md', 'lt-lg', 'lt-xl', 'gt-xs', 'gt-sm', 'gt- md', 'gt-lg']
+    }),
     RouterModule.forChild([
       {
         path: '',
@@ -25,7 +33,21 @@ import { TabContainerModule } from '../tab-container/tab-container.module';
         children: [
           {
             path: 'create',
-            component: TicketCreateComponent
+            component: TicketCreateComponent,
+            children: [
+              {
+                path: 'message',
+                component: TicketMessageComponent
+              },
+              {
+                path: 'contact',
+                component: TicketContactComponent
+              },
+              {
+                path: 'faq',
+                component: TicketFaqComponent
+              }
+            ]
           },
           {
             path: 'ticket1',
@@ -42,6 +64,7 @@ import { TabContainerModule } from '../tab-container/tab-container.module';
         ]
       }
     ])
-  ]
+  ],
+  exports: [TicketCreateComponent, TicketDetailsComponent]
 })
 export class TicketModule { }

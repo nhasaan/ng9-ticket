@@ -1,4 +1,10 @@
-<div fxLayout="column" fxFlex="100">
-    <div></div>
+<div fxLayout="column">
+    <div fxlayout="row" class="top-bar">
+        <div class="search-wrap" fxFlex>
+            <input placeholder="Search by typing...">
+        </div>
+        <div class="nav-wrap" fxFlex>
+        </div>
+    </div>
     <app-tab-container [tabConfiguration]="tabConfigTickets"></app-tab-container>
 </div>

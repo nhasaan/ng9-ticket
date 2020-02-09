@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'ticket',
-    loadChildren: () => import('./tab-container/tab-container.module').then(m => m.TabContainerModule)
+    loadChildren: () => import('./ticket/ticket.module').then(m => m.TicketModule)
   }
 ];
 

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-tab-container',
@@ -17,6 +19,7 @@ export class TabContainerComponent implements OnInit {
 
   @Input() tabConfiguration: any;
   @Input() selectedIndex: number;
+  subscription: Subscription;
 
   ngOnInit(): void {
     setTimeout(() => {
@@ -24,6 +27,15 @@ export class TabContainerComponent implements OnInit {
         this.setActivatedTabIndex(this.activatedRoute.firstChild.snapshot.url[0].path);
       }
     }, 500);
+
+    this.subscription = this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd)
+        , map(() => this.activatedRoute))
+      .subscribe((event) => {
+        if (event.firstChild) {
+          this.setActivatedTabIndex(event.firstChild.snapshot.url[0].path);
+        }
+      });
   }
 
   setActivatedTabIndex(path: string) {

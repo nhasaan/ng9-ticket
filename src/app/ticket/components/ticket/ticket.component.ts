@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-ticket',
@@ -28,7 +28,7 @@ export class TicketComponent implements OnInit {
         'translate': 'Ticket2',
         'path': 'ticket2',
         'serialNumber': 2,
-        'isDisable': true,
+        'isDisable': false,
         'titleUppercase': false,
         'icon': {
           right: 'cancel'
@@ -40,7 +40,7 @@ export class TicketComponent implements OnInit {
         'translate': 'Ticket3',
         'path': 'ticket3',
         'serialNumber': 3,
-        'isDisable': true,
+        'isDisable': false,
         'titleUppercase': false,
         'icon': {
           right: 'cancel'
@@ -52,7 +52,7 @@ export class TicketComponent implements OnInit {
         'translate': 'Add New',
         'path': 'create',
         'serialNumber': 4,
-        'isDisable': true,
+        'isDisable': false,
         'titleUppercase': false,
         'icon': {
           right: 'add'
@@ -63,10 +63,12 @@ export class TicketComponent implements OnInit {
   }
 
   constructor(
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
+    this.router.navigate(['ticket', 'create', 'message']);
     this.activatedRoute.queryParams.subscribe(params => {
       this.setTabConfiguration(params);
     })
