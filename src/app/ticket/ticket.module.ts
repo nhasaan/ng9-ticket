@@ -13,6 +13,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card'
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatButtonModule } from '@angular/material/button'
+import { MatDatepickerModule } from '@angular/material/datepicker'
+import { MatListModule } from '@angular/material/list'
+import { MatDividerModule } from '@angular/material/divider'
+import { MatChipsModule } from '@angular/material/chips'
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { TabContainerModule } from '../tab-container/tab-container.module';
 import { TicketIssueComponent } from './components/ticket-issue/ticket-issue.component';
 
@@ -30,6 +35,11 @@ import { TicketIssueComponent } from './components/ticket-issue/ticket-issue.com
     MatCardModule,
     MatCheckboxModule,
     MatButtonModule,
+    MatDatepickerModule,
+    MatListModule,
+    MatDividerModule,
+    MatChipsModule,
+    MatFormFieldModule,
     RouterModule.forChild([
       {
         path: '',

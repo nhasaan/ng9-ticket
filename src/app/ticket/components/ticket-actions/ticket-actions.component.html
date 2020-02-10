@@ -10,9 +10,29 @@
 </mat-card>
 <mat-card>
     <div fxlayout="row">
-        <div fxLayoutAlign="center">
-            <mat-checkbox>Check me!</mat-checkbox>
+        <div fxFlex>
+            <mat-checkbox>Follow up</mat-checkbox>
         </div>
-        <div fxFlex="50" fxLayoutAlign="center">2</div>
+        <div fxFlexLayout="row">
+            <span><input matInput [matDatepicker]="dobpicker" readonly="true"></span>
+            <mat-datepicker-toggle matSuffix [for]="dobpicker"></mat-datepicker-toggle>
+            <mat-datepicker #dobpicker></mat-datepicker>
+        </div>
+    </div>
+</mat-card>
+<mat-card>
+    <div fxlayout="row">
+        <mat-form-field>
+            <mat-chip-list #chipList aria-label="Fruit selection">
+                <mat-chip *ngFor="let tag of tags" [selectable]="selectable" [removable]="removable"
+                    (removed)="remove(tag)">
+                    {{tag.name}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="Add tag..." [matChipInputFor]="chipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="add($event)">
+            </mat-chip-list>
+        </mat-form-field>
     </div>
 </mat-card>
