@@ -11,6 +11,8 @@ import { TicketFaqComponent } from './components/ticket-faq/ticket-faq.component
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card'
+import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatButtonModule } from '@angular/material/button'
 import { TabContainerModule } from '../tab-container/tab-container.module';
 import { TicketIssueComponent } from './components/ticket-issue/ticket-issue.component';
 
@@ -21,11 +23,13 @@ import { TicketIssueComponent } from './components/ticket-issue/ticket-issue.com
   imports: [
     CommonModule,
     TabContainerModule,
-    MatCardModule,
     FlexLayoutModule.withConfig({
       useColumnBasisZero: true,
       printWithBreakpoints: ['xs', 'sm', 'md', 'lg', 'xl', 'lt-sm', 'lt-md', 'lt-lg', 'lt-xl', 'gt-xs', 'gt-sm', 'gt- md', 'gt-lg']
     }),
+    MatCardModule,
+    MatCheckboxModule,
+    MatButtonModule,
     RouterModule.forChild([
       {
         path: '',
