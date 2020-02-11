@@ -1,1 +1,30 @@
-<p>ticket-message works!</p>
+<mat-card>
+    <mat-card-title fxLayout="row" fxlayoutAlign="space-between center">
+        <span fxFlex>{{'Help! Issues Loging In'}}</span>
+        <span fxFlex class="text-right">
+            <a>
+                <mat-icon>link</mat-icon>
+            </a>
+        </span>
+    </mat-card-title>
+    <mat-card-content>
+        <mat-card>
+            <div fxLayout="column">
+                <textarea matInput>
+                    Hello Support,
+                </textarea>
+                <div fxFlexLayout="row">
+                    <button mat-button>
+                        <mat-icon>reply</mat-icon>
+                    </button>
+                    <button mat-button>
+                        <mat-icon>arrow_right_alt</mat-icon>
+                    </button>
+                    <button mat-button>
+                        <span>Comment</span>
+                    </button>
+                </div>
+            </div>
+        </mat-card>
+    </mat-card-content>
+</mat-card>

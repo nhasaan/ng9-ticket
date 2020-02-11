@@ -1,11 +1,31 @@
 <mat-card>
     <div fxlayout="row wrap">
-        <div fxFlex="50" fxLayoutAlign="center">1</div>
-        <div fxFlex="50" fxLayoutAlign="center">2</div>
+        <div fxFlex="50" fxLayoutAlign="center">
+            <button mat-button>
+                <mat-icon>edit</mat-icon>
+                <span class="ml12">Edit</span>
+            </button>
+        </div>
+        <div fxFlex="50" fxLayoutAlign="center">
+            <button mat-button>
+                <mat-icon>info</mat-icon>
+                <span>Change Status</span>
+            </button>
+        </div>
     </div>
     <div fxlayout="row wrap">
-        <div fxFlex="50" fxLayoutAlign="center">3</div>
-        <div fxFlex="50" fxLayoutAlign="center">4</div>
+        <div fxFlex="50" fxLayoutAlign="center">
+            <button mat-button>
+                <mat-icon>call_merge</mat-icon>
+                <span>Merge</span>
+            </button>
+        </div>
+        <div fxFlex="50" fxLayoutAlign="center">
+            <button mat-button>
+                <mat-icon>help</mat-icon>
+                <span>Add to FAQ</span>
+            </button>
+        </div>
     </div>
 </mat-card>
 <mat-card>
@@ -22,7 +42,10 @@
 </mat-card>
 <mat-card>
     <div fxlayout="row">
-        <mat-form-field>
+        <mat-icon>loyalty</mat-icon>
+        <input matInput placeholder="Add Tags">
+        <button mat-button><span>Add</span></button>
+        <!-- <mat-form-field>
             <mat-chip-list #chipList aria-label="Fruit selection">
                 <mat-chip *ngFor="let tag of tags" [selectable]="selectable" [removable]="removable"
                     (removed)="remove(tag)">
@@ -33,6 +56,6 @@
                     [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
                     (matChipInputTokenEnd)="add($event)">
             </mat-chip-list>
-        </mat-form-field>
+        </mat-form-field> -->
     </div>
 </mat-card>

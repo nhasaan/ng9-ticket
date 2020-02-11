@@ -18,6 +18,7 @@ import { MatListModule } from '@angular/material/list'
 import { MatDividerModule } from '@angular/material/divider'
 import { MatChipsModule } from '@angular/material/chips'
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import { TabContainerModule } from '../tab-container/tab-container.module';
 import { TicketIssueComponent } from './components/ticket-issue/ticket-issue.component';
 
@@ -40,6 +41,7 @@ import { TicketIssueComponent } from './components/ticket-issue/ticket-issue.com
     MatDividerModule,
     MatChipsModule,
     MatFormFieldModule,
+    MatIconModule,
     RouterModule.forChild([
       {
         path: '',
