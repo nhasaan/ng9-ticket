@@ -1,55 +1,58 @@
-<mat-card>
-    <div fxlayout="row">
-        <div fxFlex="50">
-            <button mat-button>
-                <mat-icon>edit</mat-icon>
-                <span class="ml4">Edit</span>
-            </button>
+<div fxLayout="column" fxLayoutGap="12px" class="t-actions" ngClass="m-top48" ngClass.lt-lg="m-top0">
+    <mat-card class="py2">
+        <div fxlayout="row">
+            <div fxFlex="50">
+                <button mat-button>
+                    <mat-icon>edit</mat-icon>
+                    <span class="ml4">Edit</span>
+                </button>
+            </div>
+            <mat-divider class="style-fix" [vertical]="true"></mat-divider>
+            <div fxFlex="50">
+                <button mat-button>
+                    <mat-icon>info</mat-icon>
+                    <span class="ml4">Change Status</span>
+                </button>
+            </div>
         </div>
-        <mat-divider class="style-fix" [vertical]="true"></mat-divider>
-        <div fxFlex="50">
-            <button mat-button>
-                <mat-icon>info</mat-icon>
-                <span class="ml4">Change Status</span>
-            </button>
-        </div>
-    </div>
-    <mat-divider></mat-divider>
-    <div fxlayout="row">
-        <div fxFlex="50">
-            <button mat-button>
-                <mat-icon>call_merge</mat-icon>
-                <span class="ml4">Merge</span>
-            </button>
-        </div>
-        <mat-divider class="style-fix" [vertical]="true"></mat-divider>
+        <mat-divider></mat-divider>
+        <div fxlayout="row">
+            <div fxFlex="50">
+                <button mat-button>
+                    <mat-icon>call_merge</mat-icon>
+                    <span class="ml4">Merge</span>
+                </button>
+            </div>
+            <mat-divider class="style-fix" [vertical]="true"></mat-divider>
 
-        <div fxFlex="50">
-            <button mat-button>
-                <mat-icon>help</mat-icon>
-                <span class="ml4">Add to FAQ</span>
-            </button>
+            <div fxFlex="50">
+                <button mat-button>
+                    <mat-icon>help</mat-icon>
+                    <span class="ml4">Add to FAQ</span>
+                </button>
+            </div>
         </div>
-    </div>
-</mat-card>
-<mat-card>
-    <div fxlayout="row">
-        <div fxFlex>
-            <mat-checkbox>Follow up</mat-checkbox>
+    </mat-card>
+    <mat-card class="py1">
+        <div fxlayout="row" fxLayoutAlign="space-between center">
+            <div fxFlex>
+                <mat-checkbox><span style="font-weight: bold;">Follow up</span></mat-checkbox>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="end center">
+                <span style="text-align: right;"><input matInput [matDatepicker]="picker" readonly="true"></span>
+                <span>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker [startAt]="defaultDate"></mat-datepicker>
+                </span>
+            </div>
         </div>
-        <div fxFlexLayout="row">
-            <span><input matInput [matDatepicker]="dobpicker" readonly="true"></span>
-            <mat-datepicker-toggle matSuffix [for]="dobpicker"></mat-datepicker-toggle>
-            <mat-datepicker #dobpicker></mat-datepicker>
-        </div>
-    </div>
-</mat-card>
-<mat-card>
-    <div fxlayout="row">
-        <mat-icon>loyalty</mat-icon>
-        <input matInput placeholder="Add Tags">
-        <button mat-button><span>Add</span></button>
-        <!-- <mat-form-field>
+    </mat-card>
+    <mat-card class="add-tag">
+        <div fxLayout="row">
+            <mat-icon class="mr4 pt2" style="opacity: 0.6; font-size: 16px;">loyalty</mat-icon>
+            <input matInput placeholder="Add Tags">
+            <button mat-raised-button><span>Add</span></button>
+            <!-- <mat-form-field>
             <mat-chip-list #chipList aria-label="Fruit selection">
                 <mat-chip *ngFor="let tag of tags" [selectable]="selectable" [removable]="removable"
                     (removed)="remove(tag)">
@@ -61,5 +64,6 @@
                     (matChipInputTokenEnd)="add($event)">
             </mat-chip-list>
         </mat-form-field> -->
-    </div>
-</mat-card>
+        </div>
+    </mat-card>
+</div>

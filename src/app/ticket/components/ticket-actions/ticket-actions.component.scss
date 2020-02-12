@@ -1,5 +1,18 @@
-mat-divider.style-fix {
+:host {
+  mat-divider.style-fix {
     height: 36px;
     margin-left: 8px;
     margin-right: 8px;
+  }
+  .m-top48 {
+    margin-top: 48px;
+  }
+  .m-top0 {
+    margin-top: 0 !important;
+  }
+  .add-tag {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+    padding-right: 0rem !important;
+  }
 }

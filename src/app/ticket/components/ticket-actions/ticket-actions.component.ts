@@ -18,6 +18,7 @@ export class TicketActionsComponent implements OnInit {
   removable = true;
   addOnBlur = true;
   tags: Tag[] = [];
+  defaultDate = new Date('01/01/2000');
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
 
   constructor() { }

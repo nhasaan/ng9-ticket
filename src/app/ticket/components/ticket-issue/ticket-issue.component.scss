@@ -1,0 +1,14 @@
+:host {
+  .title {
+    font-weight: bold;
+    color: #005242;
+    font-size: medium;
+  }
+  .mat-list-item div {
+    opacity: 0.6;
+    font-size: 12px;
+  }
+  .mat-list-item div:nth-child(3) {
+    font-weight: bold;
+  }
+}

@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -19,7 +18,11 @@ $vantage-ui-project-accent: mat-palette($mat-pink, A200, A100, A400);
 $vantage-ui-project-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$vantage-ui-project-theme: mat-light-theme($vantage-ui-project-primary, $vantage-ui-project-accent, $vantage-ui-project-warn);
+$vantage-ui-project-theme: mat-light-theme(
+  $vantage-ui-project-primary,
+  $vantage-ui-project-accent,
+  $vantage-ui-project-warn
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -31,41 +34,14 @@ $vantage-ui-project-theme: mat-light-theme($vantage-ui-project-primary, $vantage
 @import "./theme-variables.scss";
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
-$sizes: 12;
-
-@mixin margin-classes {
-  @for $i from 1 through $sizes {
-     $margin: $i * 0.25rem;
-    /* margin #{$margin} */
-    .m#{$i}  {margin: $margin;}
-    .ml#{$i} {margin-left: $margin;}
-    .mr#{$i} {margin-right: $margin;}
-    .mt#{$i} {margin-top: $margin;}
-    .mb#{$i} {margin-bottom: $margin;}
-    .mx#{$i} {margin-left: $margin; margin-right: $margin;}
-    .my#{$i} {margin-top: $margin; margin-bottom: $margin;}
-  }
+html,
+body {
+  height: 100%;
 }
-@include margin-classes;
-
-
-@mixin padding-classes {
-  @for $i from 1 through $sizes {
-    $padding: $i * 0.25rem;
-    /* padding #{$padding} */
-    .p#{$i} {padding: $padding;}
-    .pl#{$i} {padding-left: $padding;}
-    .pr#{$i} {padding-right: $padding;}
-    .pt#{$i} {padding-top: $padding;}
-    .pb#{$i} {padding-bottom: $padding;}
-    .px#{$i} {padding-left: $padding; padding-right: $padding;}
-    .py#{$i} {padding-top: $padding; padding-bottom: $padding;}
-  }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-@include padding-classes;
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /*
 primary #16AA9C
@@ -73,6 +49,162 @@ primary #16AA9C
 #C2C2C2
 #616161
 */
-.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-    background-color: transparent;
+
+.tab-wrap-detail {
+  .mat-tab-labels {
+    border: 1px solid rgba(0, 0, 0, 0.38);
+    border-bottom: 0;
+    // .mat-tab-label {
+    //   background-color: #f4f8f7;
+    // }
+    .mat-tab-label {
+      background-color: #f4f8f7;
+    }
+    :not(:last-child) {
+      border-right: 1px solid rgba(0, 0, 0, 0.38);
+    }
+    .mat-tab-label-active {
+      background-color: #ffffff;
+    }
+  }
+  .mat-flat-button,
+  .mat-raised-button,
+  .mat-fab,
+  .mat-mini-fab {
+    color: $white-background-color;
+    background-color: $primary-background-color;
+  }
 }
+.t-actions {
+  .mat-button > span {
+    opacity: 0.8;
+  }
+  .mat-flat-button,
+  .mat-raised-button,
+  .mat-fab,
+  .mat-mini-fab {
+    color: $white-background-color;
+    background-color: $primary-background-color;
+  }
+}
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background: transparent;
+}
+.top-bar .search-wrap {
+  .mat-tab-group.mat-primary .mat-ink-bar,
+  .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: transparent;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    padding-bottom: 0.5em;
+  }
+  .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: transparent;
+  }
+  .mat-form-field-label-wrapper:focus {
+    outline: transparent;
+  }
+  .mat-form-field-underline {
+    height: 0 !important;
+  }
+}
+
+.ticket-tabs-wrap > nav {
+  background-color: #16aa9c;
+  mat-tab-group {
+    margin-top: 8px;
+    background-color: #0c9788;
+    .mat-tab-header {
+      border-radius: 0;
+    }
+  }
+  .mat-tab-label-active {
+    // background-color: #1a8c83;
+    background-color: #f4f8f7;
+    opacity: 1;
+  }
+  .mat-tab-group.mat-primary .mat-ink-bar,
+  .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    // background-color: transparent;
+    display: none;
+  }
+  mat-icon {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 8px;
+  }
+}
+// .tab-wrap-detail > nav {
+//   background-color: #16aa9c;
+//   .mat-tab-label-active {
+//     background-color: #1A8C83;
+//   }
+// }
+
+/**
+Padding and margin classes
+*/
+$sizes: 12;
+
+@mixin margin-classes {
+  @for $i from 1 through $sizes {
+    $margin: $i * 0.25rem;
+    /* margin #{$margin} */
+    .m#{$i} {
+      margin: $margin !important;
+    }
+    .ml#{$i} {
+      margin-left: $margin !important;
+    }
+    .mr#{$i} {
+      margin-right: $margin !important;
+    }
+    .mt#{$i} {
+      margin-top: $margin !important;
+    }
+    .mb#{$i} {
+      margin-bottom: $margin !important;
+    }
+    .mx#{$i} {
+      margin-left: $margin !important;
+      margin-right: $margin !important;
+    }
+    .my#{$i} {
+      margin-top: $margin !important;
+      margin-bottom: $margin !important;
+    }
+  }
+}
+@include margin-classes;
+
+@mixin padding-classes {
+  @for $i from 1 through $sizes {
+    $padding: $i * 0.25rem;
+    /* padding #{$padding} */
+    .p#{$i} {
+      padding: $padding !important;
+    }
+    .pl#{$i} {
+      padding-left: $padding !important;
+    }
+    .pr#{$i} {
+      padding-right: $padding !important;
+    }
+    .pt#{$i} {
+      padding-top: $padding !important;
+    }
+    .pb#{$i} {
+      padding-bottom: $padding !important;
+    }
+    .px#{$i} {
+      padding-left: $padding !important;
+      padding-right: $padding !important;
+    }
+    .py#{$i} {
+      padding-top: $padding !important;
+      padding-bottom: $padding !important;
+    }
+  }
+}
+@include padding-classes;

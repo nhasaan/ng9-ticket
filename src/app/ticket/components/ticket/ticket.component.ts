@@ -19,7 +19,7 @@ export class TicketComponent implements OnInit {
         'isDisable': true,
         'titleUppercase': false,
         'icon': {
-          right: 'cancel'
+          right: 'close'
         },
         queryParams: queryParams
       },
@@ -31,7 +31,7 @@ export class TicketComponent implements OnInit {
         'isDisable': false,
         'titleUppercase': false,
         'icon': {
-          right: 'cancel'
+          right: 'close'
         },
         queryParams: queryParams
       },
@@ -43,7 +43,7 @@ export class TicketComponent implements OnInit {
         'isDisable': false,
         'titleUppercase': false,
         'icon': {
-          right: 'cancel'
+          right: 'close'
         },
         queryParams: queryParams
       },

@@ -1,0 +1,12 @@
+:host {
+  .top-bar {
+    background-color: #36404a;
+    .mat-form-field {
+      input {
+        background-color: #4b535e;
+        padding: 0.25rem;
+        border-radius: 0.75rem;
+      }
+    }
+  }
+}
