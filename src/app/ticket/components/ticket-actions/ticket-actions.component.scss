@@ -10,9 +10,14 @@
   .m-top0 {
     margin-top: 0 !important;
   }
-  .add-tag {
+  .add-tag,
+  .follow-up {
     padding-top: 0rem !important;
     padding-bottom: 0rem !important;
     padding-right: 0rem !important;
+    button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
   }
 }

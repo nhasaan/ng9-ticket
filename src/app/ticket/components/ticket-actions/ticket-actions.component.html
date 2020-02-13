@@ -33,7 +33,7 @@
             </div>
         </div>
     </mat-card>
-    <mat-card class="py1">
+    <mat-card class="follow-up py1">
         <div fxlayout="row" fxLayoutAlign="space-between center">
             <div fxFlex>
                 <mat-checkbox><span style="font-weight: bold;">Follow up</span></mat-checkbox>
@@ -41,8 +41,11 @@
             <div fxLayout="row" fxLayoutAlign="end center">
                 <span style="text-align: right;"><input matInput [matDatepicker]="picker" readonly="true"></span>
                 <span>
-                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <!-- <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle> -->
                     <mat-datepicker #picker [startAt]="defaultDate"></mat-datepicker>
+                    <button mat-raised-button (click)="picker.open()">
+                        <mat-icon>date_range</mat-icon>
+                    </button>
                 </span>
             </div>
         </div>
@@ -51,7 +54,7 @@
         <div fxLayout="row">
             <mat-icon class="mr4 pt2" style="opacity: 0.6; font-size: 16px;">loyalty</mat-icon>
             <input matInput placeholder="Add Tags">
-            <button mat-raised-button><span>Add</span></button>
+            <button mat-raised-button class="bltb0"><span>Add</span></button>
             <!-- <mat-form-field>
             <mat-chip-list #chipList aria-label="Fruit selection">
                 <mat-chip *ngFor="let tag of tags" [selectable]="selectable" [removable]="removable"
