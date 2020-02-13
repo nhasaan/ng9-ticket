@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ticket-faq.component.scss']
 })
 export class TicketFaqComponent implements OnInit {
+  panelOpenState = false;
 
   constructor() { }
 

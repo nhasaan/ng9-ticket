@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ticket-contact.component.scss']
 })
 export class TicketContactComponent implements OnInit {
+  panelOpenState = false;
 
   constructor() { }
 

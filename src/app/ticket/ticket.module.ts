@@ -21,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { TabContainerModule } from '../tab-container/tab-container.module';
 import { TicketIssueComponent } from './components/ticket-issue/ticket-issue.component';
 
@@ -46,6 +47,7 @@ import { TicketIssueComponent } from './components/ticket-issue/ticket-issue.com
     MatInputModule,
     MatIconModule,
     MatToolbarModule,
+    MatExpansionModule,
     RouterModule.forChild([
       {
         path: '',

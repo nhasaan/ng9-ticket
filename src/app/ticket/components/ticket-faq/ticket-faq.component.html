@@ -1,1 +1,202 @@
-<p>ticket-faq works!</p>
+<mat-accordion>
+    <mat-expansion-panel #contact>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class="title">CONTACT</span>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-list>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxLayout="row" fxFlex="100">
+                    <div fxLayout="row" fxFlex="50">
+                        <span fxFlex="30" class="c-title">Name</span>
+                        <span fxFlex="70">John Doe</span>
+                    </div>
+                    <div fxLayout="row" fxFlex="50">
+                        <span fxFlex="30" class="c-title">Department</span>
+                        <span fxFlex="70">Sales</span>
+                    </div>
+                </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Email Thread Status</div>
+                <div fxFlex="60">Received</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Priority</div>
+                <div fxFlex="60">Low</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Status</div>
+                <div fxFlex="60">Open</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Type</div>
+                <div fxFlex="60">1 Hour</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Watchers</div>
+                <div fxFlex="60">John Doe</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Tags</div>
+                <div fxFlex="60">General</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Related Account</div>
+                <div fxFlex="60"></div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Related Contact</div>
+                <div fxFlex="60"></div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Email</div>
+                <div fxFlex="60"></div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Assigned To</div>
+                <div fxFlex="60"></div>
+            </mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class="title">ADDRESS INFORMATION</span>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+            <mat-list-item>
+                <div fxFlex="40">Ticket Duration</div>
+                <div fxFlex="60">1 Hour</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Email Thread Status</div>
+                <div fxFlex="60">Received</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Priority</div>
+                <div fxFlex="60">Low</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Status</div>
+                <div fxFlex="60">Open</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Type</div>
+                <div fxFlex="60">1 Hour</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Watchers</div>
+                <div fxFlex="60">John Doe</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Tags</div>
+                <div fxFlex="60">General</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Related Account</div>
+                <div fxFlex="60"></div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Related Contact</div>
+                <div fxFlex="60"></div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Email</div>
+                <div fxFlex="60"></div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Assigned To</div>
+                <div fxFlex="60"></div>
+            </mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class="title">TROUBLE TICKET HISTORY</span>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+            <mat-list-item>
+                <div fxFlex="40">Ticket Duration</div>
+                <div fxFlex="60">1 Hour</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Email Thread Status</div>
+                <div fxFlex="60">Received</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Priority</div>
+                <div fxFlex="60">Low</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Status</div>
+                <div fxFlex="60">Open</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Type</div>
+                <div fxFlex="60">1 Hour</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Watchers</div>
+                <div fxFlex="60">John Doe</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Tags</div>
+                <div fxFlex="60">General</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Related Account</div>
+                <div fxFlex="60"></div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Related Contact</div>
+                <div fxFlex="60"></div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Email</div>
+                <div fxFlex="60"></div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <div fxFlex="40">Assigned To</div>
+                <div fxFlex="60"></div>
+            </mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
+</mat-accordion>
