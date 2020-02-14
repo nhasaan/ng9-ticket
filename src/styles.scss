@@ -125,11 +125,16 @@ primary #16AA9C
 
 .ticket-tabs-wrap > nav {
   background-color: #16aa9c;
+  border: 0;
   mat-tab-group {
     margin-top: 8px;
     background-color: #0c9788;
     .mat-tab-header {
+      border: 0;
       border-radius: 0;
+      .mat-tab-labels {
+        margin-top: -1px;
+      }
     }
   }
   .mat-tab-label-active {
