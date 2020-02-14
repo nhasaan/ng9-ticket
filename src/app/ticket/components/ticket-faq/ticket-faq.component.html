@@ -1,202 +1,133 @@
-<mat-accordion>
-    <mat-expansion-panel #contact>
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                <span class="title">CONTACT</span>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
+<div fxLayout="column" class="t-faq">
+    <div class="search-wrap" fxFlex fxLayoutAlign="end center">
+        <mat-form-field fxLayout="row" fxLayoutAlign="end center" class="mr5">
+            <mat-label>&nbsp;</mat-label>
+            <input matInput fxFlex placeholder="Search FAQs">
+            <mat-icon fxFlex>search</mat-icon>
+        </mat-form-field>
+    </div>
+    <div fxFlex>
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title fxLayout="column">
+                        <span class="f-title">What is delyte?</span>
+                        <span class="f-sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                            facilisis
+                            bibendum tortor,
+                            lacinia mollis mauris faucibus vel. Vestibulum sit amet lacus augue. </span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
 
-        <mat-list>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxLayout="row" fxFlex="100">
-                    <div fxLayout="row" fxFlex="50">
-                        <span fxFlex="30" class="c-title">Name</span>
-                        <span fxFlex="70">John Doe</span>
-                    </div>
-                    <div fxLayout="row" fxFlex="50">
-                        <span fxFlex="30" class="c-title">Department</span>
-                        <span fxFlex="70">Sales</span>
-                    </div>
-                </div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Email Thread Status</div>
-                <div fxFlex="60">Received</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Priority</div>
-                <div fxFlex="60">Low</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Status</div>
-                <div fxFlex="60">Open</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Type</div>
-                <div fxFlex="60">1 Hour</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Watchers</div>
-                <div fxFlex="60">John Doe</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Tags</div>
-                <div fxFlex="60">General</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Related Account</div>
-                <div fxFlex="60"></div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Related Contact</div>
-                <div fxFlex="60"></div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Email</div>
-                <div fxFlex="60"></div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Assigned To</div>
-                <div fxFlex="60"></div>
-            </mat-list-item>
-        </mat-list>
-    </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                <span class="title">ADDRESS INFORMATION</span>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <mat-list>
-            <mat-list-item>
-                <div fxFlex="40">Ticket Duration</div>
-                <div fxFlex="60">1 Hour</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Email Thread Status</div>
-                <div fxFlex="60">Received</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Priority</div>
-                <div fxFlex="60">Low</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Status</div>
-                <div fxFlex="60">Open</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Type</div>
-                <div fxFlex="60">1 Hour</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Watchers</div>
-                <div fxFlex="60">John Doe</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Tags</div>
-                <div fxFlex="60">General</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Related Account</div>
-                <div fxFlex="60"></div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Related Contact</div>
-                <div fxFlex="60"></div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Email</div>
-                <div fxFlex="60"></div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Assigned To</div>
-                <div fxFlex="60"></div>
-            </mat-list-item>
-        </mat-list>
-    </mat-expansion-panel>
+                <mat-list>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <div fxLayout="row" fxFlex="100">
+                            <p class="p4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                                facilisis bibendum tortor,
+                                lacinia mollis mauris faucibus vel. Vestibulum sit amet lacus augue. Aliquam massa
+                                tellus,
+                                sodales eu dui id, elementum venenatis nibh. Etiam at condimentum erat, sit amet dapibus
+                                sapien.
+                                Pellentesque nec magna dui. Nulla feugiat accumsan lorem eget tristique. Nullam sit amet
+                                hendrerit justo, vel pretium nibh. Donec in metus turpis. Integer sapien est, congue sed
+                                sagittis vel, dignissim consectetur sapien. Nulla egestas pulvinar mauris non pharetra.
 
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                <span class="title">TROUBLE TICKET HISTORY</span>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <mat-list>
-            <mat-list-item>
-                <div fxFlex="40">Ticket Duration</div>
-                <div fxFlex="60">1 Hour</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Email Thread Status</div>
-                <div fxFlex="60">Received</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Priority</div>
-                <div fxFlex="60">Low</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Status</div>
-                <div fxFlex="60">Open</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Type</div>
-                <div fxFlex="60">1 Hour</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Watchers</div>
-                <div fxFlex="60">John Doe</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Tags</div>
-                <div fxFlex="60">General</div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Related Account</div>
-                <div fxFlex="60"></div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Related Contact</div>
-                <div fxFlex="60"></div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Email</div>
-                <div fxFlex="60"></div>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>
-                <div fxFlex="40">Assigned To</div>
-                <div fxFlex="60"></div>
-            </mat-list-item>
-        </mat-list>
-    </mat-expansion-panel>
-</mat-accordion>
+                                Sed tempus urna sed viverra lacinia. Suspendisse vitae vehicula neque, vitae congue
+                                arcu. Duis
+                                ex ligula, ultricies non tempus non, bibendum vel leo. Cras non vulputate urna. Morbi
+                                quis
+                                mattis tortor, vel efficitur lacus. Nulla vel viverra nibh. Donec dapibus, magna et
+                                laoreet
+                                gravida, ex mi porttitor neque, et molestie libero felis ut enim. Sed rhoncus, nunc sed
+                                ornare
+                                posuere, turpis lacus fringilla orci, vitae hendrerit lorem enim vitae nulla. Integer
+                                ante eros,
+                                feugiat vitae quam sed, euismod accumsan mi. Proin vitae facilisis augue.</p>
+                        </div>
+                    </mat-list-item>
+                </mat-list>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title fxLayout="column">
+                        <span class="f-title">What is delyte?</span>
+                        <span class="f-sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                            facilisis
+                            bibendum tortor,
+                            lacinia mollis mauris faucibus vel. Vestibulum sit amet lacus augue. </span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <mat-list>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <div fxLayout="row" fxFlex="100">
+                            <p class="p4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                                facilisis bibendum tortor,
+                                lacinia mollis mauris faucibus vel. Vestibulum sit amet lacus augue. Aliquam massa
+                                tellus,
+                                sodales eu dui id, elementum venenatis nibh. Etiam at condimentum erat, sit amet dapibus
+                                sapien.
+                                Pellentesque nec magna dui. Nulla feugiat accumsan lorem eget tristique. Nullam sit amet
+                                hendrerit justo, vel pretium nibh. Donec in metus turpis. Integer sapien est, congue sed
+                                sagittis vel, dignissim consectetur sapien. Nulla egestas pulvinar mauris non pharetra.
+
+                                Sed tempus urna sed viverra lacinia. Suspendisse vitae vehicula neque, vitae congue
+                                arcu. Duis
+                                ex ligula, ultricies non tempus non, bibendum vel leo. Cras non vulputate urna. Morbi
+                                quis
+                                mattis tortor, vel efficitur lacus. Nulla vel viverra nibh. Donec dapibus, magna et
+                                laoreet
+                                gravida, ex mi porttitor neque, et molestie libero felis ut enim. Sed rhoncus, nunc sed
+                                ornare
+                                posuere, turpis lacus fringilla orci, vitae hendrerit lorem enim vitae nulla. Integer
+                                ante eros,
+                                feugiat vitae quam sed, euismod accumsan mi. Proin vitae facilisis augue.</p>
+                        </div>
+                    </mat-list-item>
+                </mat-list>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title fxLayout="column">
+                        <span class="f-title">What is delyte?</span>
+                        <span class="f-sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                            facilisis
+                            bibendum tortor,
+                            lacinia mollis mauris faucibus vel. Vestibulum sit amet lacus augue. </span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <mat-list>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <div fxLayout="row" fxFlex="100">
+                            <p class="p4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                                facilisis bibendum tortor,
+                                lacinia mollis mauris faucibus vel. Vestibulum sit amet lacus augue. Aliquam massa
+                                tellus,
+                                sodales eu dui id, elementum venenatis nibh. Etiam at condimentum erat, sit amet dapibus
+                                sapien.
+                                Pellentesque nec magna dui. Nulla feugiat accumsan lorem eget tristique. Nullam sit amet
+                                hendrerit justo, vel pretium nibh. Donec in metus turpis. Integer sapien est, congue sed
+                                sagittis vel, dignissim consectetur sapien. Nulla egestas pulvinar mauris non pharetra.
+
+                                Sed tempus urna sed viverra lacinia. Suspendisse vitae vehicula neque, vitae congue
+                                arcu. Duis
+                                ex ligula, ultricies non tempus non, bibendum vel leo. Cras non vulputate urna. Morbi
+                                quis
+                                mattis tortor, vel efficitur lacus. Nulla vel viverra nibh. Donec dapibus, magna et
+                                laoreet
+                                gravida, ex mi porttitor neque, et molestie libero felis ut enim. Sed rhoncus, nunc sed
+                                ornare
+                                posuere, turpis lacus fringilla orci, vitae hendrerit lorem enim vitae nulla. Integer
+                                ante eros,
+                                feugiat vitae quam sed, euismod accumsan mi. Proin vitae facilisis augue.</p>
+                        </div>
+                    </mat-list-item>
+                </mat-list>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>
