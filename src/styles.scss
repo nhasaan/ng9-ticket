@@ -234,12 +234,19 @@ app-ticket-faq {
   }
 }
 
-// .tab-wrap-detail > nav {
-//   background-color: #16aa9c;
-//   .mat-tab-label-active {
-//     background-color: #1A8C83;
-//   }
-// }
+@media (max-width: 1279px) {
+  .msg-card {
+    height: auto !important;
+  }
+  app-ticket-contact,
+  app-ticket-faq,
+  app-ticket-issue {
+    .mat-list-base .mat-list-item,
+    .mat-list-base .mat-list-option {
+      height: auto !important;
+    }
+  }
+}
 
 /**
 Padding and margin classes
