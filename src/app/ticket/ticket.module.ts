@@ -73,15 +73,57 @@ import { TicketIssueComponent } from './components/ticket-issue/ticket-issue.com
           },
           {
             path: 'ticket1',
-            component: TicketCreateComponent
+            component: TicketCreateComponent,
+            children: [
+              {
+                path: 'message',
+                component: TicketMessageComponent
+              },
+              {
+                path: 'contact',
+                component: TicketContactComponent
+              },
+              {
+                path: 'faq',
+                component: TicketFaqComponent
+              }
+            ]
           },
           {
             path: 'ticket2',
-            component: TicketCreateComponent
+            component: TicketCreateComponent,
+            children: [
+              {
+                path: 'message',
+                component: TicketMessageComponent
+              },
+              {
+                path: 'contact',
+                component: TicketContactComponent
+              },
+              {
+                path: 'faq',
+                component: TicketFaqComponent
+              }
+            ]
           },
           {
             path: 'ticket3',
-            component: TicketCreateComponent
+            component: TicketCreateComponent,
+            children: [
+              {
+                path: 'message',
+                component: TicketMessageComponent
+              },
+              {
+                path: 'contact',
+                component: TicketContactComponent
+              },
+              {
+                path: 'faq',
+                component: TicketFaqComponent
+              }
+            ]
           },
         ]
       }
